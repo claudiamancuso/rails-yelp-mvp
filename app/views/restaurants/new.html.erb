@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h1>Add a restaurant</h1>
+      <%= simple_form_for(@restaurant) do |f| %>
+        <%= f.error_notification %>
+
+        <%= f.input :name, placeholder: "Choose a restaurant" %>
+        <%= f.input :address, placeholder: "Guldbergsgade 11, 2200 København N"  %>
+        <%= f.input :phone_number, placeholder: "+61401011461"  %>
+        <%= f.input :category, collection: ["chinese", "italian", "japanese", "french", "belgian"], prompt: "What food would you like?" %>
+
+        <%= f.button :submit, class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
